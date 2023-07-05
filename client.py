@@ -6,7 +6,7 @@ import random
 import torch.nn as nn
 import torch.nn.functional as F
 from scripts import train_asr, eval_asr
-from dataset import load_datasets
+from dataset import *
 import gc
 import glob
 import os
@@ -35,8 +35,6 @@ from flwr.common import (
 
 RAY_DEDUP_LOGS=0
 
-
-
 n_encoder_layers = 2
 n_enc_replay = 6
 
@@ -44,12 +42,9 @@ net = Early_conformer(src_pad_idx=src_pad_idx, n_enc_replay=n_enc_replay, d_mode
                       dim_feed_forward=dim_feed_forward, n_head=n_heads, n_encoder_layers=n_encoder_layers, features_length=n_mels, drop_prob=drop_prob,
                       depthwise_kernel_size=depthwise_kernel_size, device=device).to(device)
 
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-trainloaders, devloaders, centraloader, test_loader = load_datasets() 
-
-
+trainloaders, devloaders, centraloader, test_loader = load_datasets_TEDLIUM()
 
 def get_parameters(net) -> List[np.ndarray]:
     return [val.cpu().numpy() for _, val in net.state_dict().items()]

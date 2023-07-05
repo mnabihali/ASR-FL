@@ -12,7 +12,7 @@ import sys
 from models.model.early_exit import Early_encoder, Early_transformer, Early_conformer, my_conformer
 from util.epoch_timer import epoch_time
 from util.beam_infer  import ctc_predict, greedy_decoder
-from dataset import load_datasets
+from dataset import *
 from torchmetrics.text import WordErrorRate
 from tqdm import tqdm
 import numpy as np
@@ -28,29 +28,20 @@ def WER(metric, y_expected, dec_out):
     my_wer = metric(y_expected, dec_out)
     return my_wer
 
-
-
 torch.set_num_threads(10)
 cuda = torch.cuda.is_available()
 device = torch.device('cuda' if cuda else 'cpu')
 wer = WordErrorRate()
 
-
-
-
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
-
 
 def initialize_weights(m):
     if hasattr(m, 'weight') and m.weight.dim() > 1:
         nn.init.xavier_uniform_(m.weight.data)
-        
-        
 
 Loss_fn = nn.CrossEntropyLoss()
 ctc_loss = nn.CTCLoss(blank=0, zero_infinity=True)
-
 
 def train_asr(net, epochs:int, trainloader): #add_train=True
     net.train()
