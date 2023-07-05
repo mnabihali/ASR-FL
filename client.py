@@ -34,17 +34,18 @@ from flwr.common import (
 )
 
 RAY_DEDUP_LOGS=0
-
+_DATASET="TEDLIUM"
 n_encoder_layers = 2
 n_enc_replay = 6
-
 net = Early_conformer(src_pad_idx=src_pad_idx, n_enc_replay=n_enc_replay, d_model=d_model, enc_voc_size=enc_voc_size, dec_voc_size=dec_voc_size, max_len=max_len,
                       dim_feed_forward=dim_feed_forward, n_head=n_heads, n_encoder_layers=n_encoder_layers, features_length=n_mels, drop_prob=drop_prob,
                       depthwise_kernel_size=depthwise_kernel_size, device=device).to(device)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-trainloaders, devloaders, centraloader, test_loader = load_datasets_TEDLIUM()
+if _DATASET=="TEDLIUM":
+    trainloaders, devloaders, centraloader, test_loader = load_datasets_TEDLIUM()
+else:
+    trainloaders, devloaders, centraloader, test_loader = load_datasets_LibriSpeech()
 
 def get_parameters(net) -> List[np.ndarray]:
     return [val.cpu().numpy() for _, val in net.state_dict().items()]
@@ -79,11 +80,13 @@ class custom_strategy(fl.server.strategy.FedAvg):
     ) -> Optional[Parameters]:
         """Initialize global model parameters."""
 
-        #state_dict = torch.load("/falavi/slu256/trained_model/bpe_conformer_scratch/mod244-transformer")
-        list_of_files = [fname for fname in glob.glob("./trained_models/round-0*")]
-        latest_round_file = max(list_of_files, key=os.path.getctime)
-        print("Loading pre-trained model from: ", latest_round_file)
-        state_dict = torch.load(latest_round_file)
+        state_dict = torch.load("./pretrained_models/librispeech1000.pth")
+
+        #next lines if we want to use checkpoints... Must be parameterized.
+        #list_of_files = [fname for fname in glob.glob("./trained_models/round-0*")]
+        #latest_round_file = max(list_of_files, key=os.path.getctime)
+        #print("Loading pre-trained model from: ", latest_round_file)
+        #state_dict = torch.load(latest_round_file)
         net.load_state_dict(state_dict)
         torch.cuda.empty_cache()
         gc.collect()
@@ -153,19 +156,17 @@ class custom_strategy(fl.server.strategy.FedAvg):
             weights = aggregate(weights_results)
         
         if weights is not None:
-          print(f">>>>>>>>>>>>>>>>>>>>>>One centralized training epoch will be performed<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-          params_dict = zip(net.state_dict().keys(), weights)
-          state_dict = OrderedDict({k: torch.Tensor(np.array(v)) for k, v in params_dict})
-          net.load_state_dict(state_dict, strict=True)
-
-          train_asr(net, epochs=1, trainloader=centraloader)
-
-          # Save the model
-          torch.save(net.state_dict(), f"trained_models/round-{server_round}.pth")
+            print(f">>>>>>>>>>>>>>>>>>>>>>One centralized training epoch will be performed<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+            params_dict = zip(net.state_dict().keys(), weights)
+            state_dict = OrderedDict({k: torch.Tensor(np.array(v)) for k, v in params_dict})
+            net.load_state_dict(state_dict, strict=True)
+            train_asr(net, epochs=1, trainloader=centraloader)
+            # Save the model
+            torch.save(net.state_dict(), f"trained_models/{_DATASET}-round-{server_round}.pth")
         new_parameters = get_parameters(net)
-        gc.collect()
-        #return ndarrays_to_parameters(new_parameters), {}
-        return ndarrays_to_parameters(weights), {}
+        #gc.collect()
+        return ndarrays_to_parameters(new_parameters), {}
+        #return ndarrays_to_parameters(weights), {}
 
 class asr_client(fl.client.Client):
 
@@ -180,8 +181,8 @@ class asr_client(fl.client.Client):
         ndarrays: List[np.ndarray] = get_parameters(self.net)
         parameters = ndarrays_to_parameters(ndarrays)
         status = Status(code=Code.OK, message='Success')
-        torch.cuda.empty_cache()
-        gc.collect()
+        #torch.cuda.empty_cache()
+        #gc.collect()
         return GetParametersRes(status=status, parameters=parameters)
 
     def fit(self, ins: FitIns) -> FitRes:   #FitRes
@@ -194,8 +195,8 @@ class asr_client(fl.client.Client):
         parameters_updated = ndarrays_to_parameters(ndarrays_updated)
         status = Status(code=Code.OK, message='Success')
         metrics = {"train_loss": norm_loss, "wer": avg_wer}
-        torch.cuda.empty_cache()
-        gc.collect()
+        #torch.cuda.empty_cache()
+        #gc.collect()
         return  FitRes(status=status, parameters=parameters_updated, num_examples=num_examples, metrics=metrics)
 
     def evaluate(self, ins:EvaluateIns) -> EvaluateRes:
@@ -205,8 +206,8 @@ class asr_client(fl.client.Client):
         set_parameters(self.net, ndarrays_original)
         norm_loss, num_examples, avg_wer = eval_asr(self.net, devloader=self.devloader)
         status = Status(code=Code.OK, message='Success')
-        torch.cuda.empty_cache()
-        gc.collect()
+        #torch.cuda.empty_cache()
+        #gc.collect()
         return EvaluateRes(status=status, loss = float(norm_loss), num_examples = num_examples, metrics = {"wer": float(avg_wer)})
 
 
@@ -284,16 +285,16 @@ def pre_trained_point(path):
 pre_trained_path ="/falavi/slu256/trained_model/bpe_conformer_scratch/mod244-transformer"
 pre_trained = pre_trained_point(pre_trained_path)
 '''
-         
+
 my_strategy = custom_strategy(
-#    initial_parameters = pre_trained,
+    #    initial_parameters = pre_trained,
     fraction_fit=0.1,
     fraction_evaluate=0,
     min_fit_clients=2,#15,
     min_evaluate_clients=2,
     min_available_clients=2,#15,
-    #evaluate_fn=get_evaluate_fn(),
-)
+     #evaluate_fn=get_evaluate_fn(),
+    )
 
 fl.simulation.start_simulation(client_fn=client_fn,
                                num_clients=2351,
@@ -301,9 +302,9 @@ fl.simulation.start_simulation(client_fn=client_fn,
                                strategy=my_strategy,
                                ray_init_args = {
                                    "include_dashboard": True, # we need this one for tracking
-                                   "num_cpus": 1,
-                                   "num_gpus": 1,
-                               },
-                               client_resources=client_resources)
+                                    "num_cpus": 1,
+                                    "num_gpus": 1,
+                                },
+                                client_resources=client_resources)
 
 

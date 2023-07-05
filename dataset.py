@@ -339,9 +339,8 @@ class LIBRISPEECH(Dataset):
         basename = speaker_federated
         #print("BASE:",basename)
         
-        folder_in_archive = os.path.join(folder_in_archive, basename)
-        
-        self._path = os.path.join(root, folder_in_archive)
+
+
         self._ext_txt = ".trans.txt"
         self._ext_audio = ".flac"
         #print("PATH:",self._path)
@@ -356,7 +355,10 @@ class LIBRISPEECH(Dataset):
         #self._walker = sorted(str(p.stem) for p in Path(self._path).glob("*/*/*" + self._ext_audio))
         #for p in Path(self._path).glob("*/*" + self._ext_audio):
         #    print("FILE:",str(p.stem), p)
-        self._walker = sorted(str(p.stem) for p in Path(self._path).glob("*/*" + self._ext_audio))
+
+        folder_in_archive = os.path.join(folder_in_archive, basename)
+        self._path = os.path.join(root, folder_in_archive)
+        self._walker=sorted(str(p.stem) for p in Path(self._path).glob("*/*" + self._ext_audio))
 
     def __getitem__(self, n: int) -> Tuple[Tensor, int, str, int, int, int]:
         """Load the n-th sample from the dataset.
@@ -444,33 +446,28 @@ def load_datasets_LibriSpeech():
     return trainloader, devloader, trainloader_gl, testloader
 
 def load_datasets_TEDLIUM():
-    #stm_path="/falavi/corpora/TEDLIUM_release-3/legacy/train/stm"
-
     train_list=sorted(os.listdir("/falavi/corpora/TEDLIUM_release-3/legacy/train/stm"))
     #random.shuffle(train_list)
 
     dev_list=sorted(os.listdir("/falavi/corpora/TEDLIUM_release-3/legacy/dev/stm"))
     #random.shuffle(dev_list)
 
-    trgl_spk_pth = '/flower/data/LibriSpeech/train/9999_/'
-    #print('trgl path', trgl_spk_pth)
+    trgl_spk_pth = '/flower/data/LibriSpeech/train/9999/'
     trainloaders = []
     devloaders = []
 
     for tr_spk_pth in train_list:
-        #print('train path', tr_spk_pth)
         train_dataset= TEDLIUM("/falavi/corpora/", release="release3", subset="train", download=False, federated_speaker=tr_spk_pth)
-        trainloaders.append(DataLoader(train_dataset, batch_size=32, shuffle=True, collate_fn=collate_fn, num_workers=0))
+        trainloaders.append(DataLoader(train_dataset, batch_size=64, shuffle=True, collate_fn=collate_fn, num_workers=0))
     for dev_spk_pth in dev_list:
-        #print('dev path', dev_spk_pth)
         dev_dataset= TEDLIUM("/falavi/corpora/", release="release3", subset="dev", download=False, federated_speaker=dev_spk_pth)
         devloaders.append(DataLoader(dev_dataset, batch_size=1, shuffle = False, collate_fn=collate_infer_fn, num_workers=0))
         
     traingl_dataset = LIBRISPEECH("/flower/data/", url=URL_LS_TRAINCLEAN100, download=False, speaker_federated=trgl_spk_pth)
-    test_dataset = torchaudio.datasets.TEDLIUM("/falavi/corpora/", release="release3", subset="test", download=False)
+    trainloader_gl = DataLoader(traingl_dataset, batch_size=32, shuffle=True, collate_fn=collate_fn, num_workers=0)
 
-    trainloader_gl = DataLoader(traingl_dataset, batch_size=4, shuffle=True, collate_fn=collate_fn, num_workers=0)
-    testloader = torch.utils.data.DataLoader(test_dataset, pin_memory=False, batch_size=1, num_workers=0, shuffle=False, collate_fn=collate_infer_fn)
+    test_dataset = torchaudio.datasets.TEDLIUM("/falavi/corpora/", release="release3", subset="test", download=False)
+    testloader = torch.utils.data.DataLoader(test_dataset, pin_memory=False, batch_size=1, num_workers=4, shuffle=False, collate_fn=collate_infer_fn)
     devloaders = trainloaders
     return trainloaders, devloaders, trainloader_gl, testloader
 
