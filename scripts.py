@@ -120,7 +120,7 @@ def train_asr(net, epochs:int, trainloader): #add_train=True
             loss.backward()
             torch.nn.utils.clip_grad_norm_(net.parameters(), clip)
             optimizer.step()
-            epoch_loss += loss.item()
+            epoch_loss += loss.detach().item()
             #print('step :', round((i / len(iterator)) * 100, 2), '% , loss :', loss.item())
             norm_loss = epoch_loss / len(iterator)
         avg_wer = sum (acc) / len(acc)
