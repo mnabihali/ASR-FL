@@ -52,6 +52,7 @@ def get_parameters(net) -> List[np.ndarray]:
 
 def set_parameters(net, parameters: List[np.ndarray]):
     params_dict = zip(net.state_dict().keys(), parameters)
+    print(params_dict)
     state_dict = OrderedDict({k: torch.Tensor(np.array(v)) for k, v in params_dict})
     net.load_state_dict(state_dict, strict=True)
 
@@ -186,18 +187,20 @@ class asr_client(fl.client.Client):
         return GetParametersRes(status=status, parameters=parameters)
 
     def fit(self, ins: FitIns) -> FitRes:   #FitRes
-        print(f"[Client {self.cid}] fit, config: {ins.config}")
+        
         parameters_original = ins.parameters
         ndarrays_original = parameters_to_ndarrays(parameters_original)
         set_parameters(self.net, ndarrays_original)
-        norm_loss, num_examples, avg_wer = train_asr(self.net, epochs=5, trainloader=self.trainloader)
+
+        #norm_loss, num_examples, avg_wer = train_asr(self.net, epochs=5, trainloader=self.trainloader)
+        norm_loss, num_examples = train_asr(self.net, epochs=5, trainloader=self.trainloader)
         ndarrays_updated = get_parameters(self.net)
         parameters_updated = ndarrays_to_parameters(ndarrays_updated)
         status = Status(code=Code.OK, message='Success')
-        metrics = {"train_loss": norm_loss, "wer": avg_wer}
+        metrics = {"train_loss": norm_loss}#, "wer": avg_wer}
         #torch.cuda.empty_cache()
         #gc.collect()
-        return  FitRes(status=status, parameters=parameters_updated, num_examples=num_examples, metrics=metrics)
+        return FitRes(status=status, parameters=parameters_updated, num_examples=num_examples, metrics=metrics)
 
     def evaluate(self, ins:EvaluateIns) -> EvaluateRes:
         print(f"[Client {self.cid}] evaluate, config: {ins.config}")

@@ -55,27 +55,26 @@ def train_asr(net, epochs:int, trainloader): #add_train=True
     iterator = trainloader
 
     learning_rate = 0.01 #SGD: (google 0.008) 0.001
-    optimizer=torch.optim.SGD(params=net.parameters(), lr=learning_rate)
+    optimizer = torch.optim.SGD(params=net.parameters(), lr=learning_rate)
 
     #optimizer = torch.optim.Adam(params=net.parameters(), lr=0, betas=(0.9, 0.98), eps=adam_eps, weight_decay=weight_decay)
     #optimizer = NoamOpt(d_model, warmup, AdamW(params=net.parameters(), lr=0, betas=(0.9, 0.98), eps=adam_eps, weight_decay=weight_decay))
 
-    for i in range (epochs):
+    for e in range (epochs):
+        print('Iterator len', len(iterator))
+        num_examples = len(iterator.dataset)
         for i, batch in enumerate(tqdm(iterator)):
-        
-            print('Iterator len', len(iterator))
-            
-            num_examples = len(iterator.dataset)
+            net.zero_grad()
             if not batch:
                 continue
     
             src = batch[0].to(device)
-            trg = batch[1][:, :-1].to(device)  # cut [0, 28, ..., 28, 29] -> [0, 28, ..., 28]
+            #trg = batch[1][:, :-1].to(device)  # cut [0, 28, ..., 28, 29] -> [0, 28, ..., 28]
             trg_expect = batch[1][:, 1:].to(device)  # shift [0, 28, ..., 28, 29] -> [28, ..., 28, 29]
             valid_lengths = batch[3]
             encoder = net(src, valid_lengths)
             ctc_target_len = batch[2]
-            loss_layer = 0
+            loss = 0
             if i % 300 == 0:
                 if bpe_flag:
                     #print("EXPECTED:", sp.decode(trg_expect[0].tolist()).lower())
@@ -87,36 +86,35 @@ def train_asr(net, epochs:int, trainloader): #add_train=True
             last_probs = encoder[encoder.size(0) - 1].to(device)
             ctc_input_len = torch.full(size=(encoder.size(1),), fill_value=encoder.size(2), dtype=torch.long)
             for enc in encoder[0:encoder.size(0) - 1]:
-                loss_layer += ctc_loss(enc.permute(1, 0, 2), batch[1], ctc_input_len, ctc_target_len).to(device)
-                if i % 300 == 0:
-                    if bpe_flag:
-                        #print("CTC_OUT at [", i, "]:", sp.decode(ctc_predict(enc[0].unsqueeze(0))).lower())
-                        dec = sp.decode(ctc_predict(enc[0].unsqueeze(0))).lower()
-                    else:
-                        #print("CTC_OUT at [", i, "]:", ctc_predict(enc[0].unsqueeze(0)))
-                        dec = ctc_predict(enc[0].unsqueeze(0))
+                loss += ctc_loss(enc.permute(1, 0, 2), batch[1], ctc_input_len, ctc_target_len).to(device)
+                #if i % 300 == 0:
+                #    if bpe_flag:
+                #        #print("CTC_OUT at [", i, "]:", sp.decode(ctc_predict(enc[0].unsqueeze(0))).lower())
+                #        dec = sp.decode(ctc_predict(enc[0].unsqueeze(0))).lower()
+                #    else:
+                #        #print("CTC_OUT at [", i, "]:", ctc_predict(enc[0].unsqueeze(0)))
+                #        dec = ctc_predict(enc[0].unsqueeze(0))
             del encoder
-            loss_layer += ctc_loss(last_probs.permute(1, 0, 2), batch[1], ctc_input_len, ctc_target_len).to(device)
-            if i % 300 == 0:
-                if bpe_flag:
-                    #print("CTC_OUT at [", i, "]:", sp.decode(ctc_predict(last_probs[0].unsqueeze(0))).lower())
-                    predicted = sp.decode(ctc_predict(last_probs[0].unsqueeze(0))).lower()
-                else:
-                    #print("CTC_OUT at [", i, "]:", ctc_predict(last_probs[0].unsqueeze(0)))
-                    predicted = ctc_predict(last_probs[0].unsqueeze(0))
-            metric = wer(predicted , expected)
-            acc.append(metric)
-            loss = loss_layer
-            net.zero_grad()
+            loss += ctc_loss(last_probs.permute(1, 0, 2), batch[1], ctc_input_len, ctc_target_len).to(device)
+            #if i % 300 == 0:
+            #    if bpe_flag:
+            #        #print("CTC_OUT at [", i, "]:", sp.decode(ctc_predict(last_probs[0].unsqueeze(0))).lower())
+            #        predicted = sp.decode(ctc_predict(last_probs[0].unsqueeze(0))).lower()
+            #    else:
+            #        #print("CTC_OUT at [", i, "]:", ctc_predict(last_probs[0].unsqueeze(0)))
+            #        predicted = ctc_predict(last_probs[0].unsqueeze(0))
+            #metric = wer(predicted , expected)
+            #acc.append(metric)
+            #loss = loss_layer
             loss.backward()
             torch.nn.utils.clip_grad_norm_(net.parameters(), clip)
             optimizer.step()
             epoch_loss += loss.detach().item()
             #print('step :', round((i / len(iterator)) * 100, 2), '% , loss :', loss.item())
             norm_loss = epoch_loss / len(iterator)
-        avg_wer = sum (acc) / len(acc)
-        print("LOSS:",norm_loss,"N_SAMPLES:",num_examples,"WER:",avg_wer)
-        return norm_loss, num_examples, avg_wer
+        #avg_wer = sum (acc) / len(acc)
+        print("LOSS:",norm_loss,"N_SAMPLES:",num_examples)#,"WER:",avg_wer)
+        return norm_loss, num_examples#, avg_wer
         
         
 
