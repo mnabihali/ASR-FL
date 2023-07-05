@@ -1,808 +1,0 @@
-/opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-  warn(
-INFO flwr 2023-07-02 10:41:33,803 | app.py:146 | Starting Flower simulation, config: ServerConfig(num_rounds=10, round_timeout=None)
-2023-07-02 10:41:36,421	INFO services.py:1470 -- View the Ray dashboard at [1m[32mhttp://127.0.0.1:8265[39m[22m
-INFO flwr 2023-07-02 10:41:37,907 | app.py:180 | Flower VCE: Ray initialized with resources: {'memory': 186701384704.0, 'object_store_memory': 48957366272.0, 'node:172.17.0.6': 1.0, 'GPU': 1.0, 'accelerator_type:A40': 1.0, 'CPU': 1.0}
-INFO flwr 2023-07-02 10:41:37,915 | server.py:86 | Initializing global parameters
-INFO flwr 2023-07-02 10:41:38,275 | server.py:269 | Using initial parameters provided by strategy
-INFO flwr 2023-07-02 10:41:38,275 | server.py:88 | Evaluating initial parameters
-INFO flwr 2023-07-02 10:41:38,275 | server.py:101 | FL starting
-DEBUG flwr 2023-07-02 10:41:38,276 | server.py:218 | fit_round 1: strategy sampled 6 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1171957)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1171957)[0m   warn(
-[2m[36m(launch_and_fit pid=1171957)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1171957)[0m  20%|██        | 1/5 [00:05<00:22,  5.75s/it]
-[2m[36m(launch_and_fit pid=1171957)[0m  40%|████      | 2/5 [00:08<00:12,  4.14s/it]
-[2m[36m(launch_and_fit pid=1171957)[0m  60%|██████    | 3/5 [00:11<00:06,  3.38s/it]
-[2m[36m(launch_and_fit pid=1171957)[0m  80%|████████  | 4/5 [00:14<00:03,  3.41s/it]
-[2m[36m(launch_and_fit pid=1171957)[0m 100%|██████████| 5/5 [00:17<00:00,  3.13s/it]100%|██████████| 5/5 [00:17<00:00,  3.47s/it]
-[2m[36m(launch_and_fit pid=1172099)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1172099)[0m   warn(
-[2m[36m(launch_and_fit pid=1172099)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1172099)[0m  20%|██        | 1/5 [00:06<00:25,  6.35s/it]
-[2m[36m(launch_and_fit pid=1172099)[0m  40%|████      | 2/5 [00:09<00:12,  4.32s/it]
-[2m[36m(launch_and_fit pid=1172099)[0m  60%|██████    | 3/5 [00:12<00:07,  3.65s/it]
-[2m[36m(launch_and_fit pid=1172099)[0m  80%|████████  | 4/5 [00:14<00:03,  3.20s/it]
-[2m[36m(launch_and_fit pid=1172099)[0m 100%|██████████| 5/5 [00:16<00:00,  2.62s/it]100%|██████████| 5/5 [00:16<00:00,  3.24s/it]
-[2m[36m(launch_and_fit pid=1172240)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1172240)[0m   warn(
-[2m[36m(launch_and_fit pid=1172240)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1172240)[0m  25%|██▌       | 1/4 [00:05<00:17,  5.72s/it]
-[2m[36m(launch_and_fit pid=1172240)[0m  50%|█████     | 2/4 [00:07<00:07,  3.69s/it]
-[2m[36m(launch_and_fit pid=1172240)[0m  75%|███████▌  | 3/4 [00:10<00:03,  3.02s/it]
-[2m[36m(launch_and_fit pid=1172240)[0m 100%|██████████| 4/4 [00:11<00:00,  2.46s/it]100%|██████████| 4/4 [00:11<00:00,  2.95s/it]
-[2m[36m(launch_and_fit pid=1172378)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1172378)[0m   warn(
-[2m[36m(launch_and_fit pid=1172378)[0m   0%|          | 0/2 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1172378)[0m  50%|█████     | 1/2 [00:04<00:04,  4.21s/it]
-[2m[36m(launch_and_fit pid=1172378)[0m 100%|██████████| 2/2 [00:04<00:00,  2.05s/it]100%|██████████| 2/2 [00:04<00:00,  2.38s/it]
-[2m[36m(launch_and_fit pid=1172511)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1172511)[0m   warn(
-[2m[36m(launch_and_fit pid=1172511)[0m   0%|          | 0/2 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1172511)[0m  50%|█████     | 1/2 [00:05<00:05,  5.33s/it]
-[2m[36m(launch_and_fit pid=1172511)[0m 100%|██████████| 2/2 [00:07<00:00,  3.29s/it]100%|██████████| 2/2 [00:07<00:00,  3.60s/it]
-[2m[36m(launch_and_fit pid=1172644)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1172644)[0m   warn(
-[2m[36m(launch_and_fit pid=1172644)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1172644)[0m  25%|██▌       | 1/4 [00:04<00:13,  4.53s/it]
-[2m[36m(launch_and_fit pid=1172644)[0m  50%|█████     | 2/4 [00:06<00:06,  3.26s/it]
-[2m[36m(launch_and_fit pid=1172644)[0m  75%|███████▌  | 3/4 [00:08<00:02,  2.65s/it]
-[2m[36m(launch_and_fit pid=1172644)[0m 100%|██████████| 4/4 [00:11<00:00,  2.50s/it]100%|██████████| 4/4 [00:11<00:00,  2.77s/it]
-DEBUG flwr 2023-07-02 10:44:04,814 | server.py:232 | fit_round 1 received 6 results and 0 failures
-INFO flwr 2023-07-02 10:44:06,772 | server.py:166 | evaluate_round 1: no clients selected, cancel
-DEBUG flwr 2023-07-02 10:44:06,772 | server.py:218 | fit_round 2: strategy sampled 6 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1172788)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1172788)[0m   warn(
-[2m[36m(launch_and_fit pid=1172788)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1172788)[0m  20%|██        | 1/5 [00:05<00:23,  5.85s/it]
-[2m[36m(launch_and_fit pid=1172788)[0m  40%|████      | 2/5 [00:08<00:11,  3.91s/it]
-[2m[36m(launch_and_fit pid=1172788)[0m  60%|██████    | 3/5 [00:11<00:06,  3.35s/it]
-[2m[36m(launch_and_fit pid=1172788)[0m  80%|████████  | 4/5 [00:13<00:03,  3.10s/it]
-[2m[36m(launch_and_fit pid=1172788)[0m 100%|██████████| 5/5 [00:15<00:00,  2.64s/it]100%|██████████| 5/5 [00:15<00:00,  3.13s/it]
-[2m[36m(launch_and_fit pid=1172929)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1172929)[0m   warn(
-[2m[36m(launch_and_fit pid=1172929)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1172929)[0m  25%|██▌       | 1/4 [00:05<00:15,  5.09s/it]
-[2m[36m(launch_and_fit pid=1172929)[0m  50%|█████     | 2/4 [00:07<00:06,  3.25s/it]
-[2m[36m(launch_and_fit pid=1172929)[0m  75%|███████▌  | 3/4 [00:09<00:02,  2.73s/it]
-[2m[36m(launch_and_fit pid=1172929)[0m 100%|██████████| 4/4 [00:09<00:00,  1.78s/it]100%|██████████| 4/4 [00:09<00:00,  2.37s/it]
-[2m[36m(launch_and_fit pid=1173066)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1173066)[0m   warn(
-[2m[36m(launch_and_fit pid=1173066)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1173066)[0m  33%|███▎      | 1/3 [00:05<00:11,  5.81s/it]
-[2m[36m(launch_and_fit pid=1173066)[0m  67%|██████▋   | 2/3 [00:07<00:03,  3.58s/it]
-[2m[36m(launch_and_fit pid=1173066)[0m 100%|██████████| 3/3 [00:09<00:00,  2.71s/it]100%|██████████| 3/3 [00:09<00:00,  3.17s/it]
-[2m[36m(launch_and_fit pid=1173202)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1173202)[0m   warn(
-[2m[36m(launch_and_fit pid=1173202)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1173202)[0m  17%|█▋        | 1/6 [00:05<00:27,  5.56s/it]
-[2m[36m(launch_and_fit pid=1173202)[0m  33%|███▎      | 2/6 [00:08<00:16,  4.09s/it]
-[2m[36m(launch_and_fit pid=1173202)[0m  50%|█████     | 3/6 [00:11<00:10,  3.61s/it]
-[2m[36m(launch_and_fit pid=1173202)[0m  67%|██████▋   | 4/6 [00:14<00:06,  3.47s/it]
-[2m[36m(launch_and_fit pid=1173202)[0m  83%|████████▎ | 5/6 [00:17<00:03,  3.10s/it]
-[2m[36m(launch_and_fit pid=1173202)[0m 100%|██████████| 6/6 [00:19<00:00,  2.73s/it]100%|██████████| 6/6 [00:19<00:00,  3.23s/it]
-[2m[36m(launch_and_fit pid=1173345)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1173345)[0m   warn(
-[2m[36m(launch_and_fit pid=1173345)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1173345)[0m  33%|███▎      | 1/3 [00:05<00:10,  5.26s/it]
-[2m[36m(launch_and_fit pid=1173345)[0m  67%|██████▋   | 2/3 [00:07<00:03,  3.57s/it]
-[2m[36m(launch_and_fit pid=1173345)[0m 100%|██████████| 3/3 [00:08<00:00,  2.50s/it]100%|██████████| 3/3 [00:08<00:00,  2.95s/it]
-[2m[36m(launch_and_fit pid=1173480)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1173480)[0m   warn(
-[2m[36m(launch_and_fit pid=1173480)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1173480)[0m  33%|███▎      | 1/3 [00:04<00:08,  4.45s/it]
-[2m[36m(launch_and_fit pid=1173480)[0m  67%|██████▋   | 2/3 [00:06<00:02,  2.97s/it]
-[2m[36m(launch_and_fit pid=1173480)[0m 100%|██████████| 3/3 [00:07<00:00,  2.20s/it]100%|██████████| 3/3 [00:07<00:00,  2.56s/it]
-DEBUG flwr 2023-07-02 10:46:35,887 | server.py:232 | fit_round 2 received 6 results and 0 failures
-INFO flwr 2023-07-02 10:46:37,111 | server.py:166 | evaluate_round 2: no clients selected, cancel
-DEBUG flwr 2023-07-02 10:46:37,111 | server.py:218 | fit_round 3: strategy sampled 8 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1173624)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1173624)[0m   warn(
-[2m[36m(launch_and_fit pid=1173624)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1173624)[0m  25%|██▌       | 1/4 [00:05<00:16,  5.42s/it]
-[2m[36m(launch_and_fit pid=1173624)[0m  50%|█████     | 2/4 [00:07<00:07,  3.62s/it]
-[2m[36m(launch_and_fit pid=1173624)[0m  75%|███████▌  | 3/4 [00:10<00:03,  3.04s/it]
-[2m[36m(launch_and_fit pid=1173624)[0m 100%|██████████| 4/4 [00:12<00:00,  2.78s/it]100%|██████████| 4/4 [00:12<00:00,  3.13s/it]
-[2m[36m(launch_and_fit pid=1173762)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1173762)[0m   warn(
-[2m[36m(launch_and_fit pid=1173762)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1173762)[0m  20%|██        | 1/5 [00:05<00:23,  5.92s/it]
-[2m[36m(launch_and_fit pid=1173762)[0m  40%|████      | 2/5 [00:08<00:12,  4.15s/it]
-[2m[36m(launch_and_fit pid=1173762)[0m  60%|██████    | 3/5 [00:11<00:06,  3.44s/it]
-[2m[36m(launch_and_fit pid=1173762)[0m  80%|████████  | 4/5 [00:13<00:02,  2.95s/it]
-[2m[36m(launch_and_fit pid=1173762)[0m 100%|██████████| 5/5 [00:14<00:00,  2.21s/it]100%|██████████| 5/5 [00:14<00:00,  2.91s/it]
-[2m[36m(launch_and_fit pid=1173902)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1173902)[0m   warn(
-[2m[36m(launch_and_fit pid=1173902)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1173902)[0m  20%|██        | 1/5 [00:06<00:24,  6.15s/it]
-[2m[36m(launch_and_fit pid=1173902)[0m  40%|████      | 2/5 [00:08<00:12,  4.13s/it]
-[2m[36m(launch_and_fit pid=1173902)[0m  60%|██████    | 3/5 [00:11<00:07,  3.58s/it]
-[2m[36m(launch_and_fit pid=1173902)[0m  80%|████████  | 4/5 [00:14<00:03,  3.08s/it]
-[2m[36m(launch_and_fit pid=1173902)[0m 100%|██████████| 5/5 [00:14<00:00,  2.09s/it]100%|██████████| 5/5 [00:14<00:00,  2.89s/it]
-[2m[36m(launch_and_fit pid=1174043)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1174043)[0m   warn(
-[2m[36m(launch_and_fit pid=1174043)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1174043)[0m  33%|███▎      | 1/3 [00:04<00:08,  4.23s/it]
-[2m[36m(launch_and_fit pid=1174043)[0m  67%|██████▋   | 2/3 [00:05<00:02,  2.73s/it]
-[2m[36m(launch_and_fit pid=1174043)[0m 100%|██████████| 3/3 [00:06<00:00,  1.80s/it]100%|██████████| 3/3 [00:06<00:00,  2.20s/it]
-[2m[36m(launch_and_fit pid=1174178)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1174178)[0m   warn(
-[2m[36m(launch_and_fit pid=1174178)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1174178)[0m  25%|██▌       | 1/4 [00:05<00:16,  5.62s/it]
-[2m[36m(launch_and_fit pid=1174178)[0m  50%|█████     | 2/4 [00:08<00:07,  3.81s/it]
-[2m[36m(launch_and_fit pid=1174178)[0m  75%|███████▌  | 3/4 [00:10<00:03,  3.16s/it]
-[2m[36m(launch_and_fit pid=1174178)[0m 100%|██████████| 4/4 [00:11<00:00,  2.46s/it]100%|██████████| 4/4 [00:11<00:00,  2.98s/it]
-[2m[36m(launch_and_fit pid=1174316)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1174316)[0m   warn(
-[2m[36m(launch_and_fit pid=1174316)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1174316)[0m  20%|██        | 1/5 [00:05<00:20,  5.11s/it]
-[2m[36m(launch_and_fit pid=1174316)[0m  40%|████      | 2/5 [00:07<00:11,  3.68s/it]
-[2m[36m(launch_and_fit pid=1174316)[0m  60%|██████    | 3/5 [00:10<00:06,  3.23s/it]
-[2m[36m(launch_and_fit pid=1174316)[0m  80%|████████  | 4/5 [00:13<00:03,  3.09s/it]
-[2m[36m(launch_and_fit pid=1174316)[0m 100%|██████████| 5/5 [00:15<00:00,  2.75s/it]100%|██████████| 5/5 [00:15<00:00,  3.10s/it]
-[2m[36m(launch_and_fit pid=1174456)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1174456)[0m   warn(
-[2m[36m(launch_and_fit pid=1174456)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1174456)[0m  17%|█▋        | 1/6 [00:06<00:31,  6.23s/it]
-[2m[36m(launch_and_fit pid=1174456)[0m  33%|███▎      | 2/6 [00:09<00:17,  4.48s/it]
-[2m[36m(launch_and_fit pid=1174456)[0m  50%|█████     | 3/6 [00:12<00:11,  3.98s/it]
-[2m[36m(launch_and_fit pid=1174456)[0m  67%|██████▋   | 4/6 [00:16<00:07,  3.66s/it]
-[2m[36m(launch_and_fit pid=1174456)[0m  83%|████████▎ | 5/6 [00:18<00:03,  3.40s/it]
-[2m[36m(launch_and_fit pid=1174456)[0m 100%|██████████| 6/6 [00:20<00:00,  2.73s/it]100%|██████████| 6/6 [00:20<00:00,  3.40s/it]
-[2m[36m(launch_and_fit pid=1174600)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1174600)[0m   warn(
-[2m[36m(launch_and_fit pid=1174600)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1174600)[0m  25%|██▌       | 1/4 [00:05<00:17,  5.76s/it]
-[2m[36m(launch_and_fit pid=1174600)[0m  50%|█████     | 2/4 [00:08<00:07,  3.90s/it]
-[2m[36m(launch_and_fit pid=1174600)[0m  75%|███████▌  | 3/4 [00:10<00:03,  3.28s/it]
-[2m[36m(launch_and_fit pid=1174600)[0m 100%|██████████| 4/4 [00:13<00:00,  2.92s/it]100%|██████████| 4/4 [00:13<00:00,  3.32s/it]
-DEBUG flwr 2023-07-02 10:50:10,518 | server.py:232 | fit_round 3 received 8 results and 0 failures
-INFO flwr 2023-07-02 10:50:12,108 | server.py:166 | evaluate_round 3: no clients selected, cancel
-DEBUG flwr 2023-07-02 10:50:12,108 | server.py:218 | fit_round 4: strategy sampled 5 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1174744)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1174744)[0m   warn(
-[2m[36m(launch_and_fit pid=1174744)[0m   0%|          | 0/2 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1174744)[0m  50%|█████     | 1/2 [00:05<00:05,  5.57s/it]
-[2m[36m(launch_and_fit pid=1174744)[0m 100%|██████████| 2/2 [00:06<00:00,  2.61s/it]100%|██████████| 2/2 [00:06<00:00,  3.05s/it]
-[2m[36m(launch_and_fit pid=1174877)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1174877)[0m   warn(
-[2m[36m(launch_and_fit pid=1174877)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1174877)[0m  20%|██        | 1/5 [00:05<00:22,  5.56s/it]
-[2m[36m(launch_and_fit pid=1174877)[0m  40%|████      | 2/5 [00:08<00:11,  3.89s/it]
-[2m[36m(launch_and_fit pid=1174877)[0m  60%|██████    | 3/5 [00:10<00:06,  3.28s/it]
-[2m[36m(launch_and_fit pid=1174877)[0m  80%|████████  | 4/5 [00:13<00:03,  3.03s/it]
-[2m[36m(launch_and_fit pid=1174877)[0m 100%|██████████| 5/5 [00:15<00:00,  2.60s/it]100%|██████████| 5/5 [00:15<00:00,  3.07s/it]
-[2m[36m(launch_and_fit pid=1175017)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175017)[0m   warn(
-[2m[36m(launch_and_fit pid=1175017)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175017)[0m  20%|██        | 1/5 [00:05<00:21,  5.46s/it]
-[2m[36m(launch_and_fit pid=1175017)[0m  40%|████      | 2/5 [00:08<00:12,  4.00s/it]
-[2m[36m(launch_and_fit pid=1175017)[0m  60%|██████    | 3/5 [00:10<00:06,  3.27s/it]
-[2m[36m(launch_and_fit pid=1175017)[0m  80%|████████  | 4/5 [00:13<00:03,  3.08s/it]
-[2m[36m(launch_and_fit pid=1175017)[0m 100%|██████████| 5/5 [00:14<00:00,  2.30s/it]100%|██████████| 5/5 [00:14<00:00,  2.91s/it]
-[2m[36m(launch_and_fit pid=1175158)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175158)[0m   warn(
-[2m[36m(launch_and_fit pid=1175158)[0m   0%|          | 0/1 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175158)[0m 100%|██████████| 1/1 [00:03<00:00,  3.82s/it]100%|██████████| 1/1 [00:03<00:00,  3.82s/it]
-[2m[36m(launch_and_fit pid=1175290)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175290)[0m   warn(
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 6
-CONFIG.  sample: 6 min_num_clients: 2 n_clients: 6
-[2m[36m(launch_and_fit pid=1171957)[0m [Client 969] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1171957)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1171957)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1171957)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1171957)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1171957)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172099)[0m [Client 782] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1172099)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172099)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172099)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172099)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172099)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172240)[0m [Client 1472] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1172240)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172240)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172240)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172240)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172378)[0m [Client 1752] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1172378)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1172378)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1172511)[0m [Client 520] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1172511)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1172511)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1172644)[0m [Client 1423] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1172644)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172644)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172644)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172644)[0m Iterator len 4
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 6
-CONFIG.  sample: 6 min_num_clients: 2 n_clients: 6
-[2m[36m(launch_and_fit pid=1172788)[0m [Client 238] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1172788)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172788)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172788)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172788)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1172788)[0m Iterator len 5
-[2m[1m[36m(scheduler +3m18s)[0m Tip: use `ray status` to view detailed cluster status. To disable these messages, set RAY_SCHEDULER_EVENTS=0.
-[2m[1m[33m(scheduler +3m18s)[0m Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nodes to this Ray cluster.
-[2m[36m(launch_and_fit pid=1172929)[0m [Client 288] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1172929)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172929)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172929)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1172929)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1173066)[0m [Client 709] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1173066)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173066)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173066)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173202)[0m [Client 945] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1173202)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1173202)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1173202)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1173202)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1173202)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1173202)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1173345)[0m [Client 621] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1173345)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173345)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173345)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173480)[0m [Client 139] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1173480)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173480)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1173480)[0m Iterator len 3
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 8
-CONFIG.  sample: 8 min_num_clients: 2 n_clients: 8
-[2m[36m(launch_and_fit pid=1173624)[0m [Client 2106] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1173624)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1173624)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1173624)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1173624)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1173762)[0m [Client 250] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1173762)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173762)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173762)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173762)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173762)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173902)[0m [Client 1344] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1173902)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173902)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173902)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173902)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1173902)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174043)[0m [Client 1877] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1174043)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1174043)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1174043)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1174178)[0m [Client 231] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1174178)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1174178)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1174178)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1174178)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1174316)[0m [Client 954] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1174316)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174316)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174316)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174316)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174316)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174456)[0m [Client 1236] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1174456)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1174456)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1174456)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1174456)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1174456)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1174456)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1174600)[0m [Client 1458] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1174600)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1174600)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1174600)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1174600)[0m Iterator len 4
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 5
-CONFIG.  sample: 5 min_num_clients: 2 n_clients: 5
-[2m[36m(launch_and_fit pid=1174744)[0m [Client 1025] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1174744)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1174744)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1174877)[0m [Client 2342] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1174877)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174877)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174877)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174877)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1174877)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175017)[0m [Client 1046] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1175017)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175017)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175017)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175017)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175017)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175158)[0m [Client 2067] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1175158)[0m Iterator len 1
-[2m[36m(launch_and_fit pid=1175290)[0m   0%|          | 0/2 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175290)[0m  50%|█████     | 1/2 [00:03<00:03,  3.95s/it]
-[2m[36m(launch_and_fit pid=1175290)[0m 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]100%|██████████| 2/2 [00:04<00:00,  2.36s/it]
-DEBUG flwr 2023-07-02 10:52:01,983 | server.py:232 | fit_round 4 received 5 results and 0 failures
-INFO flwr 2023-07-02 10:52:03,156 | server.py:166 | evaluate_round 4: no clients selected, cancel
-DEBUG flwr 2023-07-02 10:52:03,156 | server.py:218 | fit_round 5: strategy sampled 8 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1175431)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175431)[0m   warn(
-[2m[36m(launch_and_fit pid=1175431)[0m   0%|          | 0/2 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175431)[0m  50%|█████     | 1/2 [00:04<00:04,  4.29s/it]
-[2m[36m(launch_and_fit pid=1175431)[0m 100%|██████████| 2/2 [00:05<00:00,  2.37s/it]100%|██████████| 2/2 [00:05<00:00,  2.66s/it]
-[2m[36m(launch_and_fit pid=1175564)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175564)[0m   warn(
-[2m[36m(launch_and_fit pid=1175564)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175564)[0m  17%|█▋        | 1/6 [00:06<00:33,  6.62s/it]
-[2m[36m(launch_and_fit pid=1175564)[0m  33%|███▎      | 2/6 [00:09<00:18,  4.65s/it]
-[2m[36m(launch_and_fit pid=1175564)[0m  50%|█████     | 3/6 [00:12<00:11,  3.93s/it]
-[2m[36m(launch_and_fit pid=1175564)[0m  67%|██████▋   | 4/6 [00:15<00:07,  3.56s/it]
-[2m[36m(launch_and_fit pid=1175564)[0m  83%|████████▎ | 5/6 [00:19<00:03,  3.40s/it]
-[2m[36m(launch_and_fit pid=1175564)[0m 100%|██████████| 6/6 [00:21<00:00,  3.09s/it]100%|██████████| 6/6 [00:21<00:00,  3.59s/it]
-[2m[36m(launch_and_fit pid=1175708)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175708)[0m   warn(
-[2m[36m(launch_and_fit pid=1175708)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175708)[0m  20%|██        | 1/5 [00:05<00:22,  5.55s/it]
-[2m[36m(launch_and_fit pid=1175708)[0m  40%|████      | 2/5 [00:08<00:11,  3.83s/it]
-[2m[36m(launch_and_fit pid=1175708)[0m  60%|██████    | 3/5 [00:10<00:06,  3.31s/it]
-[2m[36m(launch_and_fit pid=1175708)[0m  80%|████████  | 4/5 [00:13<00:02,  2.86s/it]
-[2m[36m(launch_and_fit pid=1175708)[0m 100%|██████████| 5/5 [00:13<00:00,  1.94s/it]100%|██████████| 5/5 [00:13<00:00,  2.67s/it]
-[2m[36m(launch_and_fit pid=1175848)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175848)[0m   warn(
-[2m[36m(launch_and_fit pid=1175848)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175848)[0m  17%|█▋        | 1/6 [00:05<00:26,  5.31s/it]
-[2m[36m(launch_and_fit pid=1175848)[0m  33%|███▎      | 2/6 [00:08<00:15,  3.84s/it]
-[2m[36m(launch_and_fit pid=1175848)[0m  50%|█████     | 3/6 [00:11<00:10,  3.44s/it]
-[2m[36m(launch_and_fit pid=1175848)[0m  67%|██████▋   | 4/6 [00:13<00:06,  3.14s/it]
-[2m[36m(launch_and_fit pid=1175848)[0m  83%|████████▎ | 5/6 [00:16<00:02,  2.82s/it]
-[2m[36m(launch_and_fit pid=1175848)[0m 100%|██████████| 6/6 [00:16<00:00,  2.06s/it]100%|██████████| 6/6 [00:16<00:00,  2.77s/it]
-[2m[36m(launch_and_fit pid=1175991)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1175991)[0m   warn(
-[2m[36m(launch_and_fit pid=1175991)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1175991)[0m  20%|██        | 1/5 [00:05<00:21,  5.28s/it]
-[2m[36m(launch_and_fit pid=1175991)[0m  40%|████      | 2/5 [00:07<00:10,  3.62s/it]
-[2m[36m(launch_and_fit pid=1175991)[0m  60%|██████    | 3/5 [00:10<00:06,  3.16s/it]
-[2m[36m(launch_and_fit pid=1175991)[0m  80%|████████  | 4/5 [00:12<00:02,  2.83s/it]
-[2m[36m(launch_and_fit pid=1175991)[0m 100%|██████████| 5/5 [00:12<00:00,  1.92s/it]100%|██████████| 5/5 [00:12<00:00,  2.60s/it]
-[2m[36m(launch_and_fit pid=1176131)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1176131)[0m   warn(
-[2m[36m(launch_and_fit pid=1176131)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1176131)[0m  20%|██        | 1/5 [00:05<00:21,  5.42s/it]
-[2m[36m(launch_and_fit pid=1176131)[0m  40%|████      | 2/5 [00:08<00:11,  3.75s/it]
-[2m[36m(launch_and_fit pid=1176131)[0m  60%|██████    | 3/5 [00:10<00:06,  3.15s/it]
-[2m[36m(launch_and_fit pid=1176131)[0m  80%|████████  | 4/5 [00:13<00:02,  2.94s/it]
-[2m[36m(launch_and_fit pid=1176131)[0m 100%|██████████| 5/5 [00:13<00:00,  2.11s/it]100%|██████████| 5/5 [00:13<00:00,  2.74s/it]
-[2m[36m(launch_and_fit pid=1176272)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1176272)[0m   warn(
-[2m[36m(launch_and_fit pid=1176272)[0m   0%|          | 0/2 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1176272)[0m  50%|█████     | 1/2 [00:04<00:04,  4.15s/it]
-[2m[36m(launch_and_fit pid=1176272)[0m 100%|██████████| 2/2 [00:04<00:00,  2.02s/it]100%|██████████| 2/2 [00:04<00:00,  2.34s/it]
-[2m[36m(launch_and_fit pid=1176405)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1176405)[0m   warn(
-[2m[36m(launch_and_fit pid=1176405)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1176405)[0m  20%|██        | 1/5 [00:06<00:26,  6.52s/it]
-[2m[36m(launch_and_fit pid=1176405)[0m  40%|████      | 2/5 [00:09<00:13,  4.37s/it]
-[2m[36m(launch_and_fit pid=1176405)[0m  60%|██████    | 3/5 [00:12<00:07,  3.76s/it]
-[2m[36m(launch_and_fit pid=1176405)[0m  80%|████████  | 4/5 [00:15<00:03,  3.52s/it]
-[2m[36m(launch_and_fit pid=1176405)[0m 100%|██████████| 5/5 [00:17<00:00,  2.87s/it]100%|██████████| 5/5 [00:17<00:00,  3.46s/it]
-DEBUG flwr 2023-07-02 10:55:32,053 | server.py:232 | fit_round 5 received 8 results and 0 failures
-INFO flwr 2023-07-02 10:55:33,894 | server.py:166 | evaluate_round 5: no clients selected, cancel
-DEBUG flwr 2023-07-02 10:55:33,894 | server.py:218 | fit_round 6: strategy sampled 2 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1176548)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1176548)[0m   warn(
-[2m[36m(launch_and_fit pid=1176548)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1176548)[0m  20%|██        | 1/5 [00:07<00:28,  7.02s/it]
-[2m[36m(launch_and_fit pid=1176548)[0m  40%|████      | 2/5 [00:09<00:13,  4.63s/it]
-[2m[36m(launch_and_fit pid=1176548)[0m  60%|██████    | 3/5 [00:13<00:08,  4.06s/it]
-[2m[36m(launch_and_fit pid=1176548)[0m  80%|████████  | 4/5 [00:16<00:03,  3.59s/it]
-[2m[36m(launch_and_fit pid=1176548)[0m 100%|██████████| 5/5 [00:17<00:00,  2.58s/it]100%|██████████| 5/5 [00:17<00:00,  3.40s/it]
-[2m[36m(launch_and_fit pid=1176689)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1176689)[0m   warn(
-[2m[36m(launch_and_fit pid=1176689)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1176689)[0m  17%|█▋        | 1/6 [00:05<00:28,  5.73s/it]
-[2m[36m(launch_and_fit pid=1176689)[0m  33%|███▎      | 2/6 [00:08<00:16,  4.10s/it]
-[2m[36m(launch_and_fit pid=1176689)[0m  50%|█████     | 3/6 [00:11<00:10,  3.65s/it]
-[2m[36m(launch_and_fit pid=1176689)[0m  67%|██████▋   | 4/6 [00:14<00:06,  3.44s/it]
-[2m[36m(launch_and_fit pid=1176689)[0m  83%|████████▎ | 5/6 [00:18<00:03,  3.32s/it]
-[2m[36m(launch_and_fit pid=1176689)[0m 100%|██████████| 6/6 [00:21<00:00,  3.34s/it]100%|██████████| 6/6 [00:21<00:00,  3.57s/it]
-DEBUG flwr 2023-07-02 10:56:38,240 | server.py:232 | fit_round 6 received 2 results and 0 failures
-INFO flwr 2023-07-02 10:56:38,960 | server.py:166 | evaluate_round 6: no clients selected, cancel
-DEBUG flwr 2023-07-02 10:56:38,960 | server.py:218 | fit_round 7: strategy sampled 8 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1176841)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1176841)[0m   warn(
-[2m[36m(launch_and_fit pid=1176841)[0m   0%|          | 0/2 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1176841)[0m  50%|█████     | 1/2 [00:04<00:04,  4.11s/it]
-[2m[36m(launch_and_fit pid=1176841)[0m 100%|██████████| 2/2 [00:05<00:00,  2.51s/it]100%|██████████| 2/2 [00:05<00:00,  2.75s/it]
-[2m[36m(launch_and_fit pid=1176974)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1176974)[0m   warn(
-[2m[36m(launch_and_fit pid=1176974)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1176974)[0m  25%|██▌       | 1/4 [00:05<00:15,  5.08s/it]
-[2m[36m(launch_and_fit pid=1176974)[0m  50%|█████     | 2/4 [00:07<00:06,  3.24s/it]
-[2m[36m(launch_and_fit pid=1176974)[0m  75%|███████▌  | 3/4 [00:09<00:02,  2.80s/it]
-[2m[36m(launch_and_fit pid=1176974)[0m 100%|██████████| 4/4 [00:11<00:00,  2.41s/it]100%|██████████| 4/4 [00:11<00:00,  2.78s/it]
-[2m[36m(launch_and_fit pid=1177112)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1177112)[0m   warn(
-[2m[36m(launch_and_fit pid=1177112)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1177112)[0m  25%|██▌       | 1/4 [00:04<00:14,  4.84s/it]
-[2m[36m(launch_and_fit pid=1177112)[0m  50%|█████     | 2/4 [00:07<00:06,  3.48s/it]
-[2m[36m(launch_and_fit pid=1177112)[0m  75%|███████▌  | 3/4 [00:09<00:02,  2.92s/it]
-[2m[36m(launch_and_fit pid=1177112)[0m 100%|██████████| 4/4 [00:11<00:00,  2.60s/it]100%|██████████| 4/4 [00:11<00:00,  2.93s/it]
-[2m[36m(launch_and_fit pid=1177250)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1177250)[0m   warn(
-[2m[36m(launch_and_fit pid=1177250)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1177250)[0m  20%|██        | 1/5 [00:05<00:20,  5.04s/it]
-[2m[36m(launch_and_fit pid=1177250)[0m  40%|████      | 2/5 [00:07<00:10,  3.64s/it]
-[2m[36m(launch_and_fit pid=1177250)[0m  60%|██████    | 3/5 [00:09<00:05,  2.88s/it]
-[2m[36m(launch_and_fit pid=1177250)[0m  80%|████████  | 4/5 [00:12<00:02,  2.77s/it]
-[2m[36m(launch_and_fit pid=1177250)[0m 100%|██████████| 5/5 [00:12<00:00,  1.97s/it]100%|██████████| 5/5 [00:12<00:00,  2.57s/it]
-[2m[36m(launch_and_fit pid=1177390)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1177390)[0m   warn(
-[2m[36m(launch_and_fit pid=1177390)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1177390)[0m  17%|█▋        | 1/6 [00:05<00:27,  5.57s/it]
-[2m[36m(launch_and_fit pid=1177390)[0m  33%|███▎      | 2/6 [00:08<00:16,  4.12s/it]
-[2m[36m(launch_and_fit pid=1177390)[0m  50%|█████     | 3/6 [00:11<00:10,  3.57s/it]
-[2m[36m(launch_and_fit pid=1177390)[0m  67%|██████▋   | 4/6 [00:14<00:07,  3.50s/it]
-[2m[36m(launch_and_fit pid=1177390)[0m  83%|████████▎ | 5/6 [00:17<00:03,  3.32s/it]
-[2m[36m(launch_and_fit pid=1177390)[0m 100%|██████████| 6/6 [00:19<00:00,  2.86s/it]100%|██████████| 6/6 [00:19<00:00,  3.32s/it]
-[2m[36m(launch_and_fit pid=1177533)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1177533)[0m   warn(
-[2m[36m(launch_and_fit pid=1177533)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1177533)[0m  33%|███▎      | 1/3 [00:04<00:09,  4.59s/it]
-[2m[36m(launch_and_fit pid=1177533)[0m  67%|██████▋   | 2/3 [00:06<00:02,  2.90s/it]
-[2m[36m(launch_and_fit pid=1177533)[0m 100%|██████████| 3/3 [00:07<00:00,  2.15s/it]100%|██████████| 3/3 [00:07<00:00,  2.52s/it]
-[2m[36m(launch_and_fit pid=1177668)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1177668)[0m   warn(
-[2m[36m(launch_and_fit pid=1177668)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1177668)[0m  25%|██▌       | 1/4 [00:06<00:18,  6.10s/it]
-[2m[36m(launch_and_fit pid=1177668)[0m  50%|█████     | 2/4 [00:08<00:08,  4.01s/it]
-[2m[36m(launch_and_fit pid=1177668)[0m  75%|███████▌  | 3/4 [00:11<00:03,  3.41s/it]
-[2m[36m(launch_and_fit pid=1177668)[0m 100%|██████████| 4/4 [00:13<00:00,  3.04s/it]100%|██████████| 4/4 [00:13<00:00,  3.45s/it]
-[2m[36m(launch_and_fit pid=1177807)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1177807)[0m   warn(
-[2m[36m(launch_and_fit pid=1177807)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1177807)[0m  33%|███▎      | 1/3 [00:05<00:11,  5.59s/it]
-[2m[36m(launch_and_fit pid=1177807)[0m  67%|██████▋   | 2/3 [00:07<00:03,  3.33s/it]
-[2m[36m(launch_and_fit pid=1177807)[0m 100%|██████████| 3/3 [00:08<00:00,  2.12s/it]100%|██████████| 3/3 [00:08<00:00,  2.67s/it]
-DEBUG flwr 2023-07-02 10:59:53,152 | server.py:232 | fit_round 7 received 8 results and 0 failures
-INFO flwr 2023-07-02 10:59:54,677 | server.py:166 | evaluate_round 7: no clients selected, cancel
-DEBUG flwr 2023-07-02 10:59:54,678 | server.py:218 | fit_round 8: strategy sampled 6 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1177948)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1177948)[0m   warn(
-[2m[36m(launch_and_fit pid=1177948)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1177948)[0m  25%|██▌       | 1/4 [00:05<00:17,  5.91s/it]
-[2m[36m(launch_and_fit pid=1177948)[0m  50%|█████     | 2/4 [00:08<00:07,  3.88s/it]
-[2m[36m(launch_and_fit pid=1177948)[0m  75%|███████▌  | 3/4 [00:11<00:03,  3.42s/it]
-[2m[36m(launch_and_fit pid=1177948)[0m 100%|██████████| 4/4 [00:13<00:00,  3.02s/it]100%|██████████| 4/4 [00:13<00:00,  3.41s/it]
-[2m[36m(launch_and_fit pid=1178087)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1178087)[0m   warn(
-[2m[36m(launch_and_fit pid=1178087)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1178087)[0m  20%|██        | 1/5 [00:06<00:25,  6.46s/it]
-[2m[36m(launch_and_fit pid=1178087)[0m  40%|████      | 2/5 [00:09<00:12,  4.24s/it]
-[2m[36m(launch_and_fit pid=1178087)[0m  60%|██████    | 3/5 [00:12<00:07,  3.80s/it]
-[2m[36m(launch_and_fit pid=1178087)[0m  80%|████████  | 4/5 [00:15<00:03,  3.37s/it]
-[2m[36m(launch_and_fit pid=1178087)[0m 100%|██████████| 5/5 [00:17<00:00,  2.89s/it]100%|██████████| 5/5 [00:17<00:00,  3.43s/it]
-[2m[36m(launch_and_fit pid=1178228)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1178228)[0m   warn(
-[2m[36m(launch_and_fit pid=1178228)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1178228)[0m  33%|███▎      | 1/3 [00:05<00:10,  5.06s/it]
-[2m[36m(launch_and_fit pid=1178228)[0m  67%|██████▋   | 2/3 [00:06<00:03,  3.12s/it]
-[2m[36m(launch_and_fit pid=1178228)[0m 100%|██████████| 3/3 [00:07<00:00,  1.85s/it]100%|██████████| 3/3 [00:07<00:00,  2.39s/it]
-[2m[36m(launch_and_fit pid=1178363)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1178363)[0m   warn(
-[2m[36m(launch_and_fit pid=1178363)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1178363)[0m  20%|██        | 1/5 [00:04<00:19,  4.79s/it]
-[2m[36m(launch_and_fit pid=1178363)[0m  40%|████      | 2/5 [00:07<00:10,  3.50s/it]
-[2m[36m(launch_and_fit pid=1178363)[0m  60%|██████    | 3/5 [00:10<00:06,  3.13s/it]
-[2m[36m(launch_and_fit pid=1175290)[0m [Client 1157] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1175290)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1175290)[0m Iterator len 2
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 8
-CONFIG.  sample: 8 min_num_clients: 2 n_clients: 8
-[2m[36m(launch_and_fit pid=1175431)[0m [Client 911] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1175431)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1175431)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1175564)[0m [Client 648] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1175564)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175564)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175564)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175564)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175564)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175564)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175708)[0m [Client 188] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1175708)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175708)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175708)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175708)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175708)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175848)[0m [Client 1637] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1175848)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175848)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175848)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175848)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175848)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175848)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1175991)[0m [Client 851] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1175991)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175991)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175991)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175991)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1175991)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176131)[0m [Client 2110] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1176131)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176131)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176131)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176131)[0m REMOVED: StevenJohnson_2003  LAB:  would start appearing and basically the shape appears largely because of a kind of a first mover advantage if you 're the first site there everybody links to you if you 're the second site there  most people link to you and so very quickly you can accumulate a bunch of links and it makes it more likely for newcomers to link to you in the future and then you get this kind of 
-[2m[36m(launch_and_fit pid=1176131)[0m 
-[2m[36m(launch_and_fit pid=1176131)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176131)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176272)[0m [Client 753] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1176272)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1176272)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1176405)[0m [Client 843] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1176405)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176405)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176405)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176405)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176405)[0m Iterator len 5
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 2
-CONFIG.  sample: 2 min_num_clients: 2 n_clients: 2
-[2m[36m(launch_and_fit pid=1176548)[0m [Client 1288] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1176548)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176548)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176548)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176548)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176548)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1176689)[0m [Client 787] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1176689)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1176689)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1176689)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1176689)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1176689)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1176689)[0m Iterator len 6
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 8
-CONFIG.  sample: 8 min_num_clients: 2 n_clients: 8
-[2m[36m(launch_and_fit pid=1176841)[0m [Client 146] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1176841)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1176841)[0m Iterator len 2
-[2m[36m(launch_and_fit pid=1176974)[0m [Client 2140] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1176974)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1176974)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1176974)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1176974)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177112)[0m [Client 137] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1177112)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177112)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177112)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177112)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177250)[0m [Client 2278] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1177250)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1177250)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1177250)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1177250)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1177250)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1177390)[0m [Client 97] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1177390)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1177390)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1177390)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1177390)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1177390)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1177390)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1177533)[0m [Client 139] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1177533)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1177533)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1177533)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1177668)[0m [Client 1237] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1177668)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177668)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177668)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177668)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177807)[0m [Client 1642] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1177807)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1177807)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1177807)[0m Iterator len 3
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 6
-CONFIG.  sample: 6 min_num_clients: 2 n_clients: 6
-[2m[36m(launch_and_fit pid=1177948)[0m [Client 1272] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1177948)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177948)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177948)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1177948)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1178087)[0m [Client 1065] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1178087)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178087)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178087)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178087)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178087)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178228)[0m [Client 992] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1178228)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1178228)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1178228)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1178363)[0m [Client 169] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1178363)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178363)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178363)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178363)[0m  80%|████████  | 4/5 [00:12<00:02,  2.79s/it]
-[2m[36m(launch_and_fit pid=1178363)[0m 100%|██████████| 5/5 [00:13<00:00,  2.35s/it]100%|██████████| 5/5 [00:13<00:00,  2.79s/it]
-[2m[36m(launch_and_fit pid=1178505)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1178505)[0m   warn(
-[2m[36m(launch_and_fit pid=1178505)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1178505)[0m  17%|█▋        | 1/6 [00:06<00:33,  6.64s/it]
-[2m[36m(launch_and_fit pid=1178505)[0m  33%|███▎      | 2/6 [00:09<00:18,  4.56s/it]
-[2m[36m(launch_and_fit pid=1178505)[0m  50%|█████     | 3/6 [00:13<00:11,  3.99s/it]
-[2m[36m(launch_and_fit pid=1178505)[0m  67%|██████▋   | 4/6 [00:16<00:07,  3.77s/it]
-[2m[36m(launch_and_fit pid=1178505)[0m  83%|████████▎ | 5/6 [00:19<00:03,  3.59s/it]
-[2m[36m(launch_and_fit pid=1178505)[0m 100%|██████████| 6/6 [00:20<00:00,  2.73s/it]100%|██████████| 6/6 [00:20<00:00,  3.47s/it]
-[2m[36m(launch_and_fit pid=1178649)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1178649)[0m   warn(
-[2m[36m(launch_and_fit pid=1178649)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1178649)[0m  17%|█▋        | 1/6 [00:05<00:25,  5.01s/it]
-[2m[36m(launch_and_fit pid=1178649)[0m  33%|███▎      | 2/6 [00:07<00:14,  3.64s/it]
-[2m[36m(launch_and_fit pid=1178649)[0m  50%|█████     | 3/6 [00:10<00:09,  3.16s/it]
-[2m[36m(launch_and_fit pid=1178649)[0m  67%|██████▋   | 4/6 [00:13<00:06,  3.16s/it]
-[2m[36m(launch_and_fit pid=1178649)[0m  83%|████████▎ | 5/6 [00:16<00:03,  3.06s/it]
-[2m[36m(launch_and_fit pid=1178649)[0m 100%|██████████| 6/6 [00:16<00:00,  2.21s/it]100%|██████████| 6/6 [00:16<00:00,  2.82s/it]
-DEBUG flwr 2023-07-02 11:02:42,370 | server.py:232 | fit_round 8 received 6 results and 0 failures
-INFO flwr 2023-07-02 11:02:43,633 | server.py:166 | evaluate_round 8: no clients selected, cancel
-DEBUG flwr 2023-07-02 11:02:43,633 | server.py:218 | fit_round 9: strategy sampled 7 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1178799)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1178799)[0m   warn(
-[2m[36m(launch_and_fit pid=1178799)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1178799)[0m  20%|██        | 1/5 [00:06<00:24,  6.19s/it]
-[2m[36m(launch_and_fit pid=1178799)[0m  40%|████      | 2/5 [00:08<00:12,  4.16s/it]
-[2m[36m(launch_and_fit pid=1178799)[0m  60%|██████    | 3/5 [00:11<00:07,  3.52s/it]
-[2m[36m(launch_and_fit pid=1178799)[0m  80%|████████  | 4/5 [00:14<00:03,  3.36s/it]
-[2m[36m(launch_and_fit pid=1178799)[0m 100%|██████████| 5/5 [00:17<00:00,  3.04s/it]100%|██████████| 5/5 [00:17<00:00,  3.46s/it]
-[2m[36m(launch_and_fit pid=1178940)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1178940)[0m   warn(
-[2m[36m(launch_and_fit pid=1178940)[0m   0%|          | 0/4 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1178940)[0m  25%|██▌       | 1/4 [00:06<00:18,  6.10s/it]
-[2m[36m(launch_and_fit pid=1178940)[0m  50%|█████     | 2/4 [00:08<00:07,  3.65s/it]
-[2m[36m(launch_and_fit pid=1178940)[0m  75%|███████▌  | 3/4 [00:10<00:02,  2.97s/it]
-[2m[36m(launch_and_fit pid=1178940)[0m 100%|██████████| 4/4 [00:11<00:00,  2.20s/it]100%|██████████| 4/4 [00:11<00:00,  2.80s/it]
-[2m[36m(launch_and_fit pid=1179078)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1179078)[0m   warn(
-[2m[36m(launch_and_fit pid=1179078)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1179078)[0m  20%|██        | 1/5 [00:05<00:21,  5.46s/it]
-[2m[36m(launch_and_fit pid=1179078)[0m  40%|████      | 2/5 [00:07<00:10,  3.61s/it]
-[2m[36m(launch_and_fit pid=1179078)[0m  60%|██████    | 3/5 [00:10<00:06,  3.07s/it]
-[2m[36m(launch_and_fit pid=1179078)[0m  80%|████████  | 4/5 [00:12<00:02,  2.91s/it]
-[2m[36m(launch_and_fit pid=1179078)[0m 100%|██████████| 5/5 [00:13<00:00,  2.02s/it]100%|██████████| 5/5 [00:13<00:00,  2.66s/it]
-[2m[36m(launch_and_fit pid=1179218)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1179218)[0m   warn(
-[2m[36m(launch_and_fit pid=1179218)[0m   0%|          | 0/3 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1179218)[0m  33%|███▎      | 1/3 [00:05<00:11,  5.96s/it]
-[2m[36m(launch_and_fit pid=1179218)[0m  67%|██████▋   | 2/3 [00:07<00:03,  3.51s/it]
-[2m[36m(launch_and_fit pid=1179218)[0m 100%|██████████| 3/3 [00:08<00:00,  2.15s/it]100%|██████████| 3/3 [00:08<00:00,  2.76s/it]
-[2m[36m(launch_and_fit pid=1179353)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1179353)[0m   warn(
-[2m[36m(launch_and_fit pid=1179353)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1179353)[0m  20%|██        | 1/5 [00:05<00:20,  5.16s/it]
-[2m[36m(launch_and_fit pid=1179353)[0m  40%|████      | 2/5 [00:07<00:10,  3.63s/it]
-[2m[36m(launch_and_fit pid=1179353)[0m  60%|██████    | 3/5 [00:10<00:06,  3.08s/it]
-[2m[36m(launch_and_fit pid=1179353)[0m  80%|████████  | 4/5 [00:12<00:02,  2.88s/it]
-[2m[36m(launch_and_fit pid=1179353)[0m 100%|██████████| 5/5 [00:14<00:00,  2.42s/it]100%|██████████| 5/5 [00:14<00:00,  2.86s/it]
-[2m[36m(launch_and_fit pid=1179494)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1179494)[0m   warn(
-[2m[36m(launch_and_fit pid=1179494)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1179494)[0m  20%|██        | 1/5 [00:04<00:19,  4.97s/it]
-[2m[36m(launch_and_fit pid=1179494)[0m  40%|████      | 2/5 [00:07<00:11,  3.70s/it]
-[2m[36m(launch_and_fit pid=1179494)[0m  60%|██████    | 3/5 [00:10<00:06,  3.26s/it]
-[2m[36m(launch_and_fit pid=1179494)[0m  80%|████████  | 4/5 [00:13<00:03,  3.11s/it]
-[2m[36m(launch_and_fit pid=1179494)[0m 100%|██████████| 5/5 [00:13<00:00,  2.15s/it]100%|██████████| 5/5 [00:13<00:00,  2.77s/it]
-[2m[36m(launch_and_fit pid=1179634)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1179634)[0m   warn(
-[2m[36m(launch_and_fit pid=1179634)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1179634)[0m  17%|█▋        | 1/6 [00:05<00:27,  5.40s/it]
-[2m[36m(launch_and_fit pid=1179634)[0m  33%|███▎      | 2/6 [00:08<00:15,  3.92s/it]
-[2m[36m(launch_and_fit pid=1179634)[0m  50%|█████     | 3/6 [00:10<00:09,  3.27s/it]
-[2m[36m(launch_and_fit pid=1179634)[0m  67%|██████▋   | 4/6 [00:13<00:06,  3.05s/it]
-[2m[36m(launch_and_fit pid=1179634)[0m  83%|████████▎ | 5/6 [00:16<00:02,  2.96s/it]
-[2m[36m(launch_and_fit pid=1179634)[0m 100%|██████████| 6/6 [00:18<00:00,  2.60s/it]100%|██████████| 6/6 [00:18<00:00,  3.03s/it]
-DEBUG flwr 2023-07-02 11:05:50,769 | server.py:232 | fit_round 9 received 7 results and 0 failures
-INFO flwr 2023-07-02 11:05:52,455 | server.py:166 | evaluate_round 9: no clients selected, cancel
-DEBUG flwr 2023-07-02 11:05:52,455 | server.py:218 | fit_round 10: strategy sampled 2 clients (out of 2351)
-[2m[36m(launch_and_fit pid=1179780)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1179780)[0m   warn(
-[2m[36m(launch_and_fit pid=1179780)[0m   0%|          | 0/6 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1179780)[0m  17%|█▋        | 1/6 [00:06<00:32,  6.43s/it]
-[2m[36m(launch_and_fit pid=1179780)[0m  33%|███▎      | 2/6 [00:09<00:18,  4.50s/it]
-[2m[36m(launch_and_fit pid=1179780)[0m  50%|█████     | 3/6 [00:12<00:11,  3.88s/it]
-[2m[36m(launch_and_fit pid=1179780)[0m  67%|██████▋   | 4/6 [00:16<00:07,  3.67s/it]
-[2m[36m(launch_and_fit pid=1179780)[0m  83%|████████▎ | 5/6 [00:19<00:03,  3.47s/it]
-[2m[36m(launch_and_fit pid=1179780)[0m 100%|██████████| 6/6 [00:21<00:00,  3.14s/it]100%|██████████| 6/6 [00:21<00:00,  3.62s/it]
-[2m[36m(launch_and_fit pid=1179924)[0m /opt/conda/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/opt/conda/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
-[2m[36m(launch_and_fit pid=1179924)[0m   warn(
-[2m[36m(launch_and_fit pid=1179924)[0m   0%|          | 0/5 [00:00<?, ?it/s]
-[2m[36m(launch_and_fit pid=1179924)[0m  20%|██        | 1/5 [00:04<00:18,  4.55s/it]
-[2m[36m(launch_and_fit pid=1179924)[0m  40%|████      | 2/5 [00:07<00:10,  3.57s/it]
-[2m[36m(launch_and_fit pid=1179924)[0m  60%|██████    | 3/5 [00:10<00:06,  3.19s/it]
-[2m[36m(launch_and_fit pid=1179924)[0m  80%|████████  | 4/5 [00:12<00:03,  3.01s/it]
-[2m[36m(launch_and_fit pid=1179924)[0m 100%|██████████| 5/5 [00:14<00:00,  2.62s/it]100%|██████████| 5/5 [00:14<00:00,  2.96s/it]
-DEBUG flwr 2023-07-02 11:06:55,976 | server.py:232 | fit_round 10 received 2 results and 0 failures
-INFO flwr 2023-07-02 11:06:56,748 | server.py:166 | evaluate_round 10: no clients selected, cancel
-INFO flwr 2023-07-02 11:06:56,748 | server.py:147 | FL finished in 1518.4726455351338
-INFO flwr 2023-07-02 11:06:56,748 | app.py:218 | app_fit: losses_distributed []
-INFO flwr 2023-07-02 11:06:56,749 | app.py:219 | app_fit: metrics_distributed_fit {}
-INFO flwr 2023-07-02 11:06:56,749 | app.py:220 | app_fit: metrics_distributed {}
-INFO flwr 2023-07-02 11:06:56,749 | app.py:221 | app_fit: losses_centralized []
-INFO flwr 2023-07-02 11:06:56,749 | app.py:222 | app_fit: metrics_centralized {}
-[2m[36m(launch_and_fit pid=1178363)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178363)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178505)[0m [Client 1639] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1178505)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178505)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178505)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178505)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178505)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178505)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178649)[0m [Client 132] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1178649)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178649)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178649)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178649)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178649)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1178649)[0m Iterator len 6
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 7
-CONFIG.  sample: 7 min_num_clients: 2 n_clients: 7
-[2m[36m(launch_and_fit pid=1178799)[0m [Client 1313] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1178799)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178799)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178799)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178799)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178799)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1178940)[0m [Client 236] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1178940)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1178940)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1178940)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1178940)[0m Iterator len 4
-[2m[36m(launch_and_fit pid=1179078)[0m [Client 577] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1179078)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179078)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179078)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179078)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179078)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179218)[0m [Client 1092] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1179218)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1179218)[0m Iterator len 3
-[2m[36m(launch_and_fit pid=1179218)[0m Iterator len 3
-[2m[1m[33m(scheduler +23m4s)[0m Warning: The following resource request cannot be scheduled right now: {'CPU': 1.0, 'GPU': 1.0}. This is likely due to all cluster resources being claimed by actors. Consider creating fewer actors or adding more nodes to this Ray cluster.
-[2m[36m(launch_and_fit pid=1179353)[0m [Client 1677] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1179353)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179353)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179353)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179353)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179353)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179494)[0m [Client 71] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1179494)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179494)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179494)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179494)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179494)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179634)[0m [Client 2084] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1179634)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179634)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179634)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179634)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179634)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179634)[0m Iterator len 6
-SAMPLE BEFORE: 9
-SAMPLE AFTER: 2
-CONFIG.  sample: 2 min_num_clients: 2 n_clients: 2
-[2m[36m(launch_and_fit pid=1179780)[0m [Client 1768] fit, config: {'lr': 0.001}
-[2m[36m(launch_and_fit pid=1179780)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179780)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179780)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179780)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179780)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179780)[0m Iterator len 6
-[2m[36m(launch_and_fit pid=1179924)[0m [Client 893] fit, config: {'lr': 0.003}
-[2m[36m(launch_and_fit pid=1179924)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179924)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179924)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179924)[0m Iterator len 5
-[2m[36m(launch_and_fit pid=1179924)[0m Iterator len 5
