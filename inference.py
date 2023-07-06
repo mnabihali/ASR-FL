@@ -26,6 +26,7 @@ from my_conf import *
 
 from util.data_loader import collate_infer_fn
 #from voxpopuli import dataloader_voxpopuli  
+import argparse
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -45,7 +46,7 @@ model = Early_encoder(src_pad_idx=src_pad_idx,
             device=device).to(device)
 '''
 
-device="cpu"
+device="cuda:0"
 #n_enc_replay=1
 #n_encoder_layers=4
 model = Early_conformer(src_pad_idx=src_pad_idx,
@@ -128,15 +129,15 @@ def collate_infer_fn(batch, SOS_token=trg_sos_idx, EOS_token=trg_eos_idx, PAD_to
     
 
         
-def evaluate(model):
+def evaluate(model,model_name,round):
 
     file_dict='librispeech.lex'
     words=load_dict(file_dict)
 
     #path = os.getcwd()+'/trained_model/bpe_tedlium/'
-    path = os.getcwd()+'/trained_models.1'
+    path = os.getcwd()+'/trained_models'
 
-    model = avg_models(model, path,3,10)        
+    model = avg_models(model, path, model_name, 1,round)
     model.eval()
     #w_ctc = float(sys.argv[1])
 
@@ -179,5 +180,9 @@ def evaluate(model):
                         print(set_," BEAM_OUT_",i,":",  apply_lex(re.sub(r"[#^$]+","",best_.lower()),words))
                 
 if __name__ == '__main__':
-    torch.multiprocessing.set_start_method('spawn') 
-    evaluate(model)
+    torch.multiprocessing.set_start_method('spawn')
+    parser = argparse.ArgumentParser(prog='Inference')
+    parser.add_argument('--model', type=str,help='model to be validate')
+    parser.add_argument('--round', type=int, help='model round')
+    args=parser.parse_args()
+    evaluate(model,args.model,args.round)

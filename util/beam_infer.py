@@ -155,16 +155,17 @@ def backtrack(trellis, emission, tokens, blank_id=0):
         print(t,j,"Failed to align")        
     return path[::-1]
 
-def avg_models(model, path, init, end):
+def avg_models(model, path, model_name, init, end):
     nepoch=init
 
-    best_model=path+'/round-{:d}.pth'.format(nepoch)
+    best_model=path+'/'+model_name+'-{:d}.pth'.format(nepoch)
+    print('Evaluating models:', best_model)
     model.load_state_dict(torch.load(best_model,map_location=device))
     m1=model.state_dict()
     nc = 1
 
     for nepoch in range(nepoch+1,end+1):
-        best_model=path+'/round-{:d}.pth'.format(nepoch)            
+        best_model=path+'/'+model_name+'-{:d}.pth'.format(nepoch)
         if os.path.exists(best_model):
             print("Averaging with:", best_model)
             model.load_state_dict(torch.load(best_model,map_location=torch.device(device)))

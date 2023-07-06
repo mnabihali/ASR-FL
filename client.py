@@ -39,13 +39,13 @@ _DATASET="TEDLIUM"
 _MODELNAME="TEDLIUM"
 centralizedTraining = True
 
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 n_encoder_layers = 2
 n_enc_replay = 6
 net = Early_conformer(src_pad_idx=src_pad_idx, n_enc_replay=n_enc_replay, d_model=d_model, enc_voc_size=enc_voc_size, dec_voc_size=dec_voc_size, max_len=max_len,
                       dim_feed_forward=dim_feed_forward, n_head=n_heads, n_encoder_layers=n_encoder_layers, features_length=n_mels, drop_prob=drop_prob,
                       depthwise_kernel_size=depthwise_kernel_size, device=device).to(device)
-
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 if _DATASET=="TEDLIUM":
     trainloaders, devloaders, centraloader, test_loader = load_datasets_TEDLIUM()
@@ -165,23 +165,24 @@ class custom_strategy(fl.server.strategy.FedAvg):
             ]
             weights = aggregate(weights_results)
         
-        if weights is not None and centralizedTraining:
-            print(f">>>>>>>>>>>>>>>>>>>>>>One centralized training epoch will be performed<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+        if weights is not None:
+
             params_dict = zip(net.state_dict().keys(), weights)
             state_dict = OrderedDict({k: torch.Tensor(np.array(v)) for k, v in params_dict})
             net.load_state_dict(state_dict, strict=True)
-            train_asr(net, epochs=1, trainloader=centraloader)
-            # Save the model
-            torch.save(net.state_dict(), f"trained_models/{_MODELNAME}-round-{server_round}.pth")
-            new_parameters = get_parameters(net)
-            #gc.collect()
-            return ndarrays_to_parameters(new_parameters), {}
-        else:
-            if weights is not None:
-                torch.save(net.state_dict(), f"trained_models/{_MODELNAME}-round-{server_round}.pth")
-                print(f"returning None weights, something went wrongh during aggregation..... !!!!!!!!!!!!!!!")
+
+            if centralizedTraining:
+                print(f">>>>>>>>>>>>>>>>>>>>>>One centralized training epoch will be performed<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+                train_asr(net, epochs=1, trainloader=centraloader)
+                # Save the model
             else:
                 print(f"Centralized training not in place")
+        
+            torch.save(net.state_dict(), f"trained_models/{_MODELNAME}-round-{server_round}.pth")
+            new_parameters = get_parameters(net)
+            return ndarrays_to_parameters(new_parameters), {}
+        else:
+            print(f"returning None weights, something went wrongh during aggregation..... !!!!!!!!!!!!!!!")
             return ndarrays_to_parameters(weights), {}
 
 class asr_client(fl.client.Client):
@@ -232,7 +233,10 @@ def client_fn(cid) -> asr_client:
     n_encoder_layers = 2
     n_enc_replay = 6
 
-    net = Early_conformer(src_pad_idx=src_pad_idx, n_enc_replay=n_enc_replay, d_model=d_model, enc_voc_size=enc_voc_size, dec_voc_size=dec_voc_size, max_len=max_len, dim_feed_forward=dim_feed_forward, n_head=n_heads, n_encoder_layers=n_encoder_layers, features_length=n_mels, drop_prob=drop_prob, depthwise_kernel_size=depthwise_kernel_size, device=device).to(device)
+    net = Early_conformer(src_pad_idx=src_pad_idx, n_enc_replay=n_enc_replay, d_model=d_model, enc_voc_size=enc_voc_size,\
+                          dec_voc_size=dec_voc_size, max_len=max_len, dim_feed_forward=dim_feed_forward, n_head=n_heads,\
+                          n_encoder_layers=n_encoder_layers, features_length=n_mels, drop_prob=drop_prob,\
+                          depthwise_kernel_size=depthwise_kernel_size, device=device).to(device)
 
     trainloader = trainloaders[int(cid)]
     devloader= devloaders[int(cid)]
