@@ -33,8 +33,12 @@ from flwr.common import (
     parameters_to_ndarrays,
 )
 
+###Global parameters of FL####
 RAY_DEDUP_LOGS=0
 _DATASET="TEDLIUM"
+_MODELNAME="TEDLIUM"
+centralizedTraining = True
+
 n_encoder_layers = 2
 n_enc_replay = 6
 net = Early_conformer(src_pad_idx=src_pad_idx, n_enc_replay=n_enc_replay, d_model=d_model, enc_voc_size=enc_voc_size, dec_voc_size=dec_voc_size, max_len=max_len,
@@ -42,6 +46,7 @@ net = Early_conformer(src_pad_idx=src_pad_idx, n_enc_replay=n_enc_replay, d_mode
                       depthwise_kernel_size=depthwise_kernel_size, device=device).to(device)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 if _DATASET=="TEDLIUM":
     trainloaders, devloaders, centraloader, test_loader = load_datasets_TEDLIUM()
 else:
@@ -52,8 +57,12 @@ def get_parameters(net) -> List[np.ndarray]:
 
 def set_parameters(net, parameters: List[np.ndarray]):
     params_dict = zip(net.state_dict().keys(), parameters)
-    print(params_dict)
-    state_dict = OrderedDict({k: torch.Tensor(np.array(v)) for k, v in params_dict})
+    state_dict = OrderedDict(
+        {
+            k: torch.Tensor(v) if v.shape != torch.Size([]) else torch.Tensor([0])
+            for k, v in params_dict
+        }
+    )
     net.load_state_dict(state_dict, strict=True)
 
 class custom_strategy(fl.server.strategy.FedAvg):
@@ -156,18 +165,24 @@ class custom_strategy(fl.server.strategy.FedAvg):
             ]
             weights = aggregate(weights_results)
         
-        if weights is not None:
+        if weights is not None and centralizedTraining:
             print(f">>>>>>>>>>>>>>>>>>>>>>One centralized training epoch will be performed<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
             params_dict = zip(net.state_dict().keys(), weights)
             state_dict = OrderedDict({k: torch.Tensor(np.array(v)) for k, v in params_dict})
             net.load_state_dict(state_dict, strict=True)
             train_asr(net, epochs=1, trainloader=centraloader)
             # Save the model
-            torch.save(net.state_dict(), f"trained_models/{_DATASET}-round-{server_round}.pth")
-        new_parameters = get_parameters(net)
-        #gc.collect()
-        return ndarrays_to_parameters(new_parameters), {}
-        #return ndarrays_to_parameters(weights), {}
+            torch.save(net.state_dict(), f"trained_models/{_MODELNAME}-round-{server_round}.pth")
+            new_parameters = get_parameters(net)
+            #gc.collect()
+            return ndarrays_to_parameters(new_parameters), {}
+        else:
+            if weights is not None:
+                torch.save(net.state_dict(), f"trained_models/{_MODELNAME}-round-{server_round}.pth")
+                print(f"returning None weights, something went wrongh during aggregation..... !!!!!!!!!!!!!!!")
+            else:
+                print(f"Centralized training not in place")
+            return ndarrays_to_parameters(weights), {}
 
 class asr_client(fl.client.Client):
 
@@ -187,7 +202,6 @@ class asr_client(fl.client.Client):
         return GetParametersRes(status=status, parameters=parameters)
 
     def fit(self, ins: FitIns) -> FitRes:   #FitRes
-        
         parameters_original = ins.parameters
         ndarrays_original = parameters_to_ndarrays(parameters_original)
         set_parameters(self.net, ndarrays_original)

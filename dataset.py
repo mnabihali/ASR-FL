@@ -464,7 +464,7 @@ def load_datasets_TEDLIUM():
         devloaders.append(DataLoader(dev_dataset, batch_size=1, shuffle = False, collate_fn=collate_infer_fn, num_workers=0))
         
     traingl_dataset = LIBRISPEECH("/flower/data/", url=URL_LS_TRAINCLEAN100, download=False, speaker_federated=trgl_spk_pth)
-    trainloader_gl = DataLoader(traingl_dataset, batch_size=64, shuffle=True, collate_fn=collate_fn, num_workers=0)
+    trainloader_gl = DataLoader(traingl_dataset, batch_size=4, shuffle=True, collate_fn=collate_fn, num_workers=0)
 
     test_dataset = torchaudio.datasets.TEDLIUM("/falavi/corpora/", release="release3", subset="test", download=False)
     testloader = torch.utils.data.DataLoader(test_dataset, pin_memory=False, batch_size=1, num_workers=4, shuffle=False, collate_fn=collate_infer_fn)
