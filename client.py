@@ -33,11 +33,17 @@ from flwr.common import (
     parameters_to_ndarrays,
 )
 
+parser = argparse.ArgumentParser(prog='Flower client for simulations')
+parser.add_argument('--dataset', type=str, default="TEDLIUM", help='Dataset to be used for federated learning, at the moment TEDLIUM is available')
+parser.add_argument('--modelname', type=str, default="TEDLIUM", help='Name of the model to be saved in trained_models... modelname-round-x.pth')
+parser.add_argument('--centraltraining', action='store_true')
+args=parser.parse_args()
+
 ###Global parameters of FL####
 RAY_DEDUP_LOGS=0
-_DATASET="TEDLIUM"
-_MODELNAME="TEDLIUM"
-centralizedTraining = True
+_DATASET=args.dataset
+_MODELNAME=args.modelname
+centralizedTraining = args.centraltraining
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
