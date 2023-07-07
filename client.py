@@ -177,7 +177,7 @@ class custom_strategy(fl.server.strategy.FedAvg):
                 # Save the model
             else:
                 print(f"Centralized training not in place")
-        
+
             torch.save(net.state_dict(), f"trained_models/{_MODELNAME}-round-{server_round}.pth")
             new_parameters = get_parameters(net)
             return ndarrays_to_parameters(new_parameters), {}
