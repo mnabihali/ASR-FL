@@ -185,14 +185,15 @@ class TEDLIUM(Dataset):
         stm_path = os.path.join(self._path, "stm")
 
         if type(federated_speaker) is list:
-            for f in federated_speaker:
-                if f.endswith(".stm"):
-                    stm_path = os.path.join(self._path, "stm", f)
+            for fs in federated_speaker:
+                print(fs)
+                if fs.endswith(".stm"):
+                    stm_path = os.path.join(self._path, "stm", fs)
                     # print("STM:",stm_path)
                     with open(stm_path) as f:
                         l = len(f.readlines())
-                        f = f.replace(".stm", "")
-                        self._filelist.extend((f, line) for line in range(l))
+                        fs = fs.replace(".stm", "")
+                        self._filelist.extend((fs, line) for line in range(l))
 
         else:
             if federated_speaker.endswith(".stm"):
