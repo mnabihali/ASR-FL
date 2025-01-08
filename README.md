@@ -1,4 +1,10 @@
 <div style="text-align: center;">
+    <img src="https://github.com/mnabihali/ASR-FL/blob/main/assets/banner.webp" style="border-radius: 15px;" />
+</div>
+
+# Description
+This repo. contains our implementation for our research "Fed-EE: Federating Heterogeneous ASR Models usingEarly-Exit Architectures". The paper was accepted at ENLSP (2023) workshop, hosed by NeurIPS, 2023. 
+<div style="text-align: center;">
     <img src="https://github.com/mnabihali/ASR-FL/blob/main/assets/comp.png" style="border-radius: 15px;" />
 </div>
 
