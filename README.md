@@ -16,7 +16,7 @@ Also our under-review paper in Computer Speech & Language journal "Federating Dy
 
 `script.py` : Training and Evaluation loop (based on client.py)
 
-`inference.py` : Performs the inference on both dev and test sets (called by script.py)
+`inference.py`: Performs the inference on both dev and test sets (called by script.py)
 
 `dynamic_client.py`: Code of a client with dynamic speakers
 
@@ -34,6 +34,13 @@ Also our under-review paper in Computer Speech & Language journal "Federating Dy
 
  ### For Inference
  `inference.py -- model model_name --round round_number` (it evaluates the saved central model on the dev and test sets)
+
+ # Results
+ More results with in-depth discussion are found in our research paper below ![image](https://github.com/user-attachments/assets/73b0dd4c-744a-4c1d-ad64-166aaf69c281)
+
+<div style="text-align: center;">
+    <img src="https://github.com/mnabihali/ASR-FL/blob/main/assets/results.png" style="border-radius: 15px;" />
+</div>
 
 # Publication
 ```
