@@ -13,19 +13,27 @@ Also our under-review paper in Computer Speech & Language journal "Federating Dy
 
 # Scripts Description
 `client.py` : Basic code of a client with fixed speakers
+
 `script.py` : Training and Evaluation loop (based on client.py)
+
 `inference.py` : Performs the inference on both dev and test sets (called by script.py)
-<--------------------------------------------------------------------------------------->
+
 `dynamic_client.py`: Code of a client with dynamic speakers
+
 `dynamic_script.py`: Training and evaluation loop (based on dyamic_client.py)
-<--------------------------------------------------------------------------------------->
+
 `conf.py`: Model and training configuration parameters
+
 `dataset.py`: Dataloaders and loading functions for Librispeech and TedLium-3 datasets
+
 `tedlium_dataset.py`: Advanced dataloader for TedLium-3
 
 # How to use
-For training --> Run `client.py`  (it runs a single process that simulates multiple client.py)
-For inference --> Run `inference.py -- model model_name --round round_number` (it evaluates the saved central model on the dev and test sets)
+### For Training
+ `client.py`  (it runs a single process that simulates multiple client.py)
+
+ ### For Inference
+ `inference.py -- model model_name --round round_number` (it evaluates the saved central model on the dev and test sets)
 
 # Publication
 ```
