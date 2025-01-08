@@ -36,7 +36,7 @@ Also our under-review paper in Computer Speech & Language journal "Federating Dy
  `inference.py -- model model_name --round round_number` (it evaluates the saved central model on the dev and test sets)
 
  # Results
- More results with in-depth discussion are found in our research paper below ![image](https://github.com/user-attachments/assets/73b0dd4c-744a-4c1d-ad64-166aaf69c281)
+ More results with in-depth discussion are found in our research paper.
 
 <div style="text-align: center;">
     <img src="https://github.com/mnabihali/ASR-FL/blob/main/assets/results.png" style="border-radius: 15px;" />
