@@ -1,3 +1,7 @@
+<div style="text-align: center;">
+    <img src="https://github.com/mnabihali/ASR-FL/blob/main/source/comp.pdf" alt="EFL-PEFT Banner" style="border-radius: 15px;" />
+</div>
+
 client.py: basic code of a client with fixed speakers
 script.py: training and evaluation loop (based on client.py)
 inference.py: perform inference on dev and test sets (called by script.py)
