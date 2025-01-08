@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-    <img src="https://github.com/mnabihali/ASR-FL/blob/main/source/comp.pdf" alt="EFL-PEFT Banner" style="border-radius: 15px;" />
+    <img src="https://github.com/mnabihali/ASR-FL/blob/main/assets/comp.png" alt="ASR-FL" style="border-radius: 15px;" />
 </div>
 
 client.py: basic code of a client with fixed speakers
