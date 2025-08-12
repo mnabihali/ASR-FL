@@ -65,7 +65,7 @@ Also our under-review paper in Computer Speech & Language journal "Federating Dy
 
 # Acknowledgment
 * We acknowledge the support of the PNRR project FAIR - Future AI Research (PE00000013), under the NRRP MUR program funded by the NextGenerationEU.
-  
-∗∗ We acknowledge the support of the European Union's Horizon research and innovation programme under grant agreement No 101135798, project Meetween (My Personal AI Mediator for Virtual MEETings BetWEEN People).
 
-∗∗∗ We acknowledge the CINECA award under the ISCRA-C initiative for the availability of high performance computing resources and support.
+* We acknowledge the support of the European Union's Horizon research and innovation programme under grant agreement No 101135798, project Meetween (My Personal AI Mediator for Virtual MEETings BetWEEN People).
+
+* We acknowledge the CINECA award under the ISCRA-C initiative for the availability of high-performance computing resources and support.
