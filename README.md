@@ -1,5 +1,6 @@
 <div style="text-align: center;">
-    <img src="https://github.com/mnabihali/ASR-FL/blob/main/assets/EE logo.png" style="border-radius: 15px;" />
+    <img src="https://github.com/mnabihali/ASR-FL/blob/main/assets/EE%20logo.png" 
+         style="border-radius: 15px; width: 200px; height: auto;" />
 </div>
 
 # Description
